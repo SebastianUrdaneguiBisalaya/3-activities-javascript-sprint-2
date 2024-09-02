@@ -23,3 +23,22 @@ function locateSpecificOrderByIndex(data, customerName) {
 }
 console.log(locateSpecificOrderByIndex(data, "Diana Ross"));
 // 5.
+function checkProduct(data, nameProduct) {
+  return data.some((item) =>
+    item.items.some((item) => item.productName.includes(nameProduct))
+  );
+}
+checkProduct(data, "Laptop");
+
+// Medium
+// 1.
+function calculateTotalRevenue(data) {
+  return data.reduce((acc, currentValue) => acc + currentValue.totalAmount, 1);
+}
+calculateTotalRevenue(data);
+// 2.
+function listAllPurchasedProducts(data) {
+  return data.flatMap((item) => item.items.map((item) => item.productName));
+}
+listAllPurchasedProducts(data);
+// 3.
