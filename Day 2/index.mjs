@@ -42,3 +42,7 @@ function listAllPurchasedProducts(data) {
 }
 listAllPurchasedProducts(data);
 // 3.
+function previewRecentOrder(data) {
+  return data.slice(data.length - 3);
+}
+previewRecentOrder(data);
